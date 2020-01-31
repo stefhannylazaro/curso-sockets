@@ -1,0 +1,27 @@
+{
+  "name": "curso-sockets",
+  "version": "1.0.0",
+  "description": "Iniciando con socket",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefhannylazaro/curso-sockets.git"
+  },
+  "author": "Stefhanny Lazaro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stefhannylazaro/curso-sockets/issues"
+  },
+  "homepage": "https://github.com/stefhannylazaro/curso-sockets#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
