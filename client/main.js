@@ -5,14 +5,13 @@ socket.on('messages', function(data){
 });
 
 function render(data){
-    var html='';
-    data.map(function(item,index){
-        html=`${html}
+    var html=data.map(function(item,index){
+        return(`
             <div class="message">
                 <strong>${item.nickname} dice:</strong>
                 <p>${item.text}</p>
             </div>
-        `;
-    });
+        `);
+    }).join('');
     document.getElementById('block-messages').innerHTML=html;
 }
