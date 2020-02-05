@@ -38,6 +38,12 @@ var messages=[{
 io.on('connection',function(socket){
     console.log("Cliente con IP:"+socket.handshake.address+"se ha conectado");
     socket.emit('messages',messages);
+    //recibir mensaje de cliente
+    socket.on('add-message',function(data){
+        messages.push(data);//add mensaje
+        io.sockets.emit('messages',messages);//enviar mensaje a todos
+
+    })
 })
 //crear un servidor
 server.listen(8080,function(){

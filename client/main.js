@@ -16,3 +16,16 @@ function render(data){
     }).join('');
     document.getElementById('block-messages-in').innerHTML=html;
 }
+
+function sendMessage(e){
+    //capturar mensaje
+    var msg = {
+        nickname : document.querySelector("#nickname").value,
+        text: document.querySelector("#text").value
+    }
+    document.querySelector("#nickname").style.display="none";
+    document.querySelector("#text").value = "";
+    //enviar mensaje al servidor
+    socket.emit('add-message',msg);
+    return false;
+}
