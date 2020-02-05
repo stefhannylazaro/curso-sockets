@@ -21,7 +21,18 @@ var messages=[{
     id:2,
     text:"¿Cual es tu consulta? gustosos te atenderemos",
     nickname:"luna99"
-}];
+},
+{
+    id:3,
+    text:"¿Cual es tu consulta? gustosos te atenderemos",
+    nickname:"luna99"
+},
+{
+    id:4,
+    text:"¿Cual es tu consulta? gustosos te atenderemos",
+    nickname:"luna99"
+}
+];
 
 //abrir una conexion al socket
 io.on('connection',function(socket){

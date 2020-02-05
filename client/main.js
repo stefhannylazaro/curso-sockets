@@ -1,5 +1,6 @@
-var socket=io.connect('http://192.168.1.5:8080',{forceNew:true});
+var socket=io.connect('http://10.0.2.15:8080',{forceNew:true});
 socket.on('messages', function(data){
+    console.log("mensajes");
     console.log(data);
     render(data);
 });
@@ -13,5 +14,5 @@ function render(data){
             </div>
         `);
     }).join('');
-    document.getElementById('block-messages').innerHTML=html;
+    document.getElementById('block-messages-in').innerHTML=html;
 }

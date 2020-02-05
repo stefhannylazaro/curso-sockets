@@ -2,13 +2,84 @@
     width: 30%;
     height: 400px;
     max-width: 350px;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     box-shadow: 0 0 20px #ccc inset;
     border: 1px solid #eee;
+
+    position: relative;
+
+    display: flex;
+    justify-content: stretch;
+    flex-direction: column;
+
 }
 .message{
     margin: 15px 15px 0;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #eee;
+}
+
+#block-messages-in {
+        overflow: hidden;
+        overflow-y: auto;
+        height: 450px;
+        padding-bottom: 49px;
+}
+
+.block-messages-form {
+    --size-base: 36px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.block-messages-form > input {
+   height: var(--size-base);
+   flex: 0 0 90px;
+   border: none;
+   border-radius: calc(var(--size-base) / 2);
+   background: linear-gradient(90deg, rgb(26, 103, 202), rgba(48, 206, 187, 0.35));
+   color: white;
+}
+
+.block-messages-form-inputs {
+    flex: 1 0 auto;
+    position: relative;
+    margin-right: 14px;
+}
+
+.block-messages-form-inputs input:first-child {
+    margin-top: -27px;
+    position: absolute;
+    bottom: 100%;
+    width: calc(100% - (var(--size-base) * 2));
+    left: calc(var(--size-base) / 2 );
+    border-top-left-radius: calc(var(--size-base) / 2);
+    border-top-right-radius: calc(var(--size-base) / 2);
+    padding-left: 21px;
+    border: 1px solid rgba(0, 0, 0, .35);
+}
+
+.block-messages-form-inputs input:first-child:focus {
+    outline: none;
+}
+    
+
+.block-messages-form-inputs textarea {
+    height: var(--size-base);
+    border-radius: calc(var(--size-base) / 2);
+    resize: none;
+    overflow-y: auto;
+    padding-left: 7px;
+}
+
+.block-messages-form-inputs textarea:focus {
+    outline: none;
+}
+
+.block-messages-form-inputs textarea,
+.block-messages-form-inputs input {
+    width: 100%;
+    display: block;
 }
